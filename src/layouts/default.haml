@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+    %title StaticMatic
+    = stylesheets :grid, :media => 'screen, projection'
+    = stylesheets :text, :media => 'screen, projection'
+    /[if IE]
+      = stylesheets :ie, :media => 'screen, projection'
+    = stylesheets :application, :media => 'screen, projection'
+  %body
+    #wrap
+      #left-nav
+        %ul
+          %li asdf
+          %li qwerty
+      #main-content
+        =yield
